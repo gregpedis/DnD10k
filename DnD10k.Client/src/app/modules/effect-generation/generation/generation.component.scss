@@ -1,0 +1,54 @@
+// Color
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+$color-light: forestgreen !default;
+$color-dark:   green !default;
+$color-darker: darkgreen !default;
+
+
+// Classes
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.bg-gradient {
+  background-image: linear-gradient(
+    to bottom, #00361a, #00552a,
+     #00773a, #009a4b, #00be5b);    
+
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+  }
+  
+.bg-white {
+    background-color: white;
+}
+
+.center {
+  text-align: center;
+}
+
+.title-image {
+  width: 15%;
+  height: 15%;
+}
+
+.roll {
+  width: 100%;
+}
+
+.button {
+  background-color: $color-light;
+  border-color: transparent;
+
+  &:hover {
+    background-color: $color-darker;
+    border-color: transparent;
+  }
+
+  &:active {
+    background-color: $color-dark;
+    border-color: transparent;
+  }
+}

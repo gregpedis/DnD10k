@@ -1,0 +1,65 @@
+<div class="bg-gradient">
+    <div class="container bg-white">
+
+        <br> <br> <br>
+
+        <div class="center">
+            <h2> <b> DnD 10k </b> </h2>
+            <h5> Randomly generates an effect out of 10.000 possibilities</h5>
+        </div>
+
+        <br>
+
+        <div class="center">
+            <img class="title-image" src="assets/dice.gif">
+        </div>
+
+        <br>
+
+        <div class="center roll">
+            <h4> <b>
+                    Roll: {{effect.id}}
+                </b> </h4>
+            <h4> <i>
+                    {{effect.description}}
+                </i></h4>
+        </div>
+
+        <br>
+
+        <div class="center">
+            <button class="button" (click)="generateRandomEffect()">
+                Generate
+            </button>
+        </div>
+        <br> <br>
+
+        <div *ngIf="effectsHistory.length>0; else historyPlaceholder">
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Roll</th>
+                        <th>Effect</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let effect of effectsHistory">
+                        <td> {{effect.id}} </td>
+                        <td> {{effect.description}}</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+
+        <ng-template #historyPlaceholder>
+            <h5 class="center"><i>
+                    No rolls have been generated so far...
+                </i></h5>
+        </ng-template>
+
+        <br><br>
+    </div>
+</div>

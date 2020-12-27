@@ -141,3 +141,6 @@ appsettings.Development.json
 
 # npm packages
 node_modules/
+
+# web root
+wwwroot/
